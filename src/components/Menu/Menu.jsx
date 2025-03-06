@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { IoHomeSharp } from "react-icons/io5";
 import { MdContentCopy, MdInsights } from "react-icons/md";
 import { FaBell } from "react-icons/fa";
-import { LuListTodo } from "react-icons/lu";
+import { FaGear } from "react-icons/fa6";
 
 const Menu = () => {
   return (
@@ -11,7 +11,7 @@ const Menu = () => {
       <nav>
         <Link
           to="/"
-          className="text-2xl font-poppins font-bold pb-5 hidden lg:block bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent"
+          className="text-2xl lg:text-xl font-poppins font-bold pb-5 hidden lg:block bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent"
         >
           Post Master
         </Link>
@@ -24,7 +24,7 @@ const Menu = () => {
               color: isActive ? "white" : "black",
             })}
           >
-            <IoHomeSharp className="text-2xl" />
+            <IoHomeSharp className="text-2xl lg:text-xl" />
             <p className="hidden lg:block">Home</p>
           </NavLink>
 
@@ -36,7 +36,7 @@ const Menu = () => {
               color: isActive ? "white" : "black",
             })}
           >
-            <MdContentCopy className="text-2xl" />
+            <MdContentCopy className="text-2xl lg:text-xl" />
             <p className="hidden lg:block">Content</p>
           </NavLink>
 
@@ -48,7 +48,7 @@ const Menu = () => {
               color: isActive ? "white" : "black",
             })}
           >
-            <FaBell className="text-2xl" />
+            <FaBell className="text-2xl lg:text-xl" />
             <p className="hidden lg:block">Notifactions</p>
           </NavLink>
 
@@ -60,7 +60,7 @@ const Menu = () => {
               color: isActive ? "white" : "black",
             })}
           >
-            <MdInsights className="text-2xl" />
+            <MdInsights className="text-2xl lg:text-xl" />
             <p className="hidden lg:block">Insights</p>
           </NavLink>
 
@@ -72,7 +72,7 @@ const Menu = () => {
               color: isActive ? "white" : "black",
             })}
           >
-            <FaGear className="text-2xl" />
+            <FaGear className="text-2xl lg:text-xl" />
             <p className="hidden lg:block">Setting</p>
           </NavLink>
         </div>
