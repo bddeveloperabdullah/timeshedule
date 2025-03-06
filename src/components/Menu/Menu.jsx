@@ -65,15 +65,15 @@ const Menu = () => {
           </NavLink>
 
           <NavLink
-            to="/todo"
+            to="/setting"
             className="size-10 lg:size-0 lg:w-[180px] lg:h-[40px] lg:px-3.5 flex justify-center lg:justify-start items-center lg:gap-3.5 text-base font-poppins rounded-md"
             style={({ isActive }) => ({
               background: isActive ? "#283943" : "transparent",
               color: isActive ? "white" : "black",
             })}
           >
-            <LuListTodo className="text-2xl" />
-            <p className="hidden lg:block">Todo</p>
+            <FaGear className="text-2xl" />
+            <p className="hidden lg:block">Setting</p>
           </NavLink>
         </div>
       </nav>
