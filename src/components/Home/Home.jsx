@@ -18,6 +18,16 @@ const Home = () => {
                 The Post Master
               </h1>
             </div>
+            <h1 className="text-2xl font-poppins font-semibold">Home Page</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+              distinctio sunt aliquid temporibus, excepturi officiis veritatis,
+              itaque eos modi similique iure a vel iusto culpa repudiandae earum
+              rerum placeat voluptate ullam voluptates. Nulla officia dolorem,
+              eaque reprehenderit dolores praesentium ea, voluptatibus cumque
+              quidem inventore consectetur nam veritatis voluptates accusantium
+              ex.
+            </p>
           </div>
         </div>
       </section>
