@@ -24,7 +24,7 @@ const Menu = () => {
               color: isActive ? "white" : "black",
             })}
           >
-            <IoHomeSharp className="text-xl" />
+            <IoHomeSharp className="text-2xl" />
             <p className="hidden lg:block">Home</p>
           </NavLink>
 
@@ -36,7 +36,7 @@ const Menu = () => {
               color: isActive ? "white" : "black",
             })}
           >
-            <MdContentCopy className="text-xl" />
+            <MdContentCopy className="text-2xl" />
             <p className="hidden lg:block">Content</p>
           </NavLink>
 
@@ -48,7 +48,7 @@ const Menu = () => {
               color: isActive ? "white" : "black",
             })}
           >
-            <FaBell className="text-xl" />
+            <FaBell className="text-2xl" />
             <p className="hidden lg:block">Notifactions</p>
           </NavLink>
 
@@ -60,7 +60,7 @@ const Menu = () => {
               color: isActive ? "white" : "black",
             })}
           >
-            <MdInsights className="text-xl" />
+            <MdInsights className="text-2xl" />
             <p className="hidden lg:block">Insights</p>
           </NavLink>
 
@@ -72,7 +72,7 @@ const Menu = () => {
               color: isActive ? "white" : "black",
             })}
           >
-            <LuListTodo className="text-xl" />
+            <LuListTodo className="text-2xl" />
             <p className="hidden lg:block">Todo</p>
           </NavLink>
         </div>
