@@ -11,9 +11,9 @@ const Menu = () => {
       <nav>
         <Link
           to="/"
-          className="text-2xl lg:text-xl font-poppins font-bold pb-5 hidden lg:block bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent"
+          className="text-2xl font-poppins font-bold pb-5 hidden lg:block bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent"
         >
-          Post Master
+          The Post Master
         </Link>
         <div className="flex flex-row lg:flex-col justify-around items-center lg:gap-5">
           <NavLink
@@ -41,18 +41,6 @@ const Menu = () => {
           </NavLink>
 
           <NavLink
-            to="/notifactions"
-            className="size-10 lg:size-0 lg:w-[180px] lg:h-[40px] lg:px-3.5 flex justify-center lg:justify-start items-center lg:gap-3.5 text-base font-poppins rounded-md"
-            style={({ isActive }) => ({
-              background: isActive ? "#283943" : "transparent",
-              color: isActive ? "white" : "black",
-            })}
-          >
-            <FaBell className="text-2xl lg:text-xl" />
-            <p className="hidden lg:block">Notifactions</p>
-          </NavLink>
-
-          <NavLink
             to="/insights"
             className="size-10 lg:size-0 lg:w-[180px] lg:h-[40px] lg:px-3.5 flex justify-center lg:justify-start items-center lg:gap-3.5 text-base font-poppins rounded-md"
             style={({ isActive }) => ({
@@ -62,6 +50,18 @@ const Menu = () => {
           >
             <MdInsights className="text-2xl lg:text-xl" />
             <p className="hidden lg:block">Insights</p>
+          </NavLink>
+
+          <NavLink
+            to="/notifactions"
+            className="size-10 lg:size-0 lg:w-[180px] lg:h-[40px] lg:px-3.5 flex justify-center lg:justify-start items-center lg:gap-3.5 text-base font-poppins rounded-md"
+            style={({ isActive }) => ({
+              background: isActive ? "#283943" : "transparent",
+              color: isActive ? "white" : "black",
+            })}
+          >
+            <FaBell className="text-2xl lg:text-xl" />
+            <p className="hidden lg:block">Notifactions</p>
           </NavLink>
 
           <NavLink

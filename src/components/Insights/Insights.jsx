@@ -1,15 +1,18 @@
 import React from "react";
-import Menu from "../Menu/Menu";
 import Logo from "../../similar/Logo";
+import Nav from "../../similar/Nav";
 
 const Insights = () => {
   return (
     <>
       <section>
         <div className="flex flex-col-reverse justify-start items-start gap-5">
-          <div className="fixed bottom-0 left-0  bg-white border-t lg:border-r border-[#eee] w-screen lg:w-auto lg:h-screen px-2.5 py-2.5 lg:py-7 shadow">
-            <Menu />
+          {/* Left Content  */}
+          <div>
+            <Nav />
           </div>
+
+          {/* Right Content  */}
           <div className="mb-20 lg:mb-0 lg:ms-56 p-2.5 lg:p-7">
             {/* Logo Area  */}
             <div>
