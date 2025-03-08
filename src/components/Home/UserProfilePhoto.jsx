@@ -7,7 +7,7 @@ const UserProfilePhoto = ({ previewProfilePhoto, onChange }) => {
       <div className="absolute -bottom-18 left-5">
         <div className="relative">
           <img
-            className="size-32 lg:size-42 rounded-full border-3 border-[#eee] shadow-2xl"
+            className="size-32 lg:size-42 rounded-full object-cover border-3 border-[#eee] shadow-2xl"
             src={previewProfilePhoto}
             alt=""
           />
