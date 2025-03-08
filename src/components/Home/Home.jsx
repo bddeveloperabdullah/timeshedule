@@ -31,7 +31,9 @@ const Home = () => {
       reander.onload = () => {
         const heroImage = reander.result;
         setHeroPhoto(heroImage);
+        localStorage.removeItem("uploadHeroImage");
         localStorage.setItem("uploadHeroImage", heroImage);
+        setHeroPhoto(heroImage);
       };
     }
   };
@@ -45,7 +47,9 @@ const Home = () => {
       render.onload = () => {
         const profileImage = render.result;
         setProfilePhoto(profileImage);
+        localStorage.removeItem("uploadProfileImage");
         localStorage.setItem("uploadProfileImage", profileImage);
+        setProfilePhoto(profileImage);
       };
     }
   };
