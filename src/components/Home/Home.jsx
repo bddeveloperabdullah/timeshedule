@@ -1,20 +1,18 @@
 import React, { useEffect, useState } from "react";
 import Logo from "../../similar/Logo";
 import Nav from "../../similar/Nav";
-import UserCoverPhoto from "./userCoverPhoto";
-import { MdAddAPhoto } from "react-icons/md";
 import UserProfilePhoto from "./UserProfilePhoto";
 
 const Home = () => {
-  const [coverPhoto, setCoverPhoto] = useState(null);
+  // const [coverPhoto, setCoverPhoto] = useState(null);
   const [profilePhoto, setProfilePhoto] = useState(null);
 
   useEffect(() => {
     // Cover Photo
-    const sevedCoverImage = localStorage.getItem("uploadCoverImage");
-    if (sevedCoverImage) {
-      setCoverPhoto(sevedCoverImage);
-    }
+    // const sevedCoverImage = localStorage.getItem("uploadCoverImage");
+    // if (sevedCoverImage) {
+    //   setCoverPhoto(sevedCoverImage);
+    // }
 
     // Profile Photo
     const savedProfilePhoto = localStorage.getItem("uploadProfileImage");
@@ -24,18 +22,18 @@ const Home = () => {
   }, []);
 
   // Cover Photo Change And Local Stroag Save
-  const handelCoverPhotoChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reander = new FileReader();
-      reander.readAsDataURL(file);
-      reander.onload = () => {
-        const base64Image = reander.result;
-        setCoverPhoto(base64Image);
-        localStorage.setItem("uploadCoverImage", base64Image);
-      };
-    }
-  };
+  // const handelCoverPhotoChange = (e) => {
+  //   const file = e.target.files[0];
+  //   if (file) {
+  //     const reander = new FileReader();
+  //     reander.readAsDataURL(file);
+  //     reander.onload = () => {
+  //       const base64Image = reander.result;
+  //       setCoverPhoto(base64Image);
+  //       localStorage.setItem("uploadCoverImage", base64Image);
+  //     };
+  //   }
+  // };
 
   // Profile Photo Change And Local Stroag Save
   const handelProfilePhotoChange = (e) => {
@@ -71,10 +69,6 @@ const Home = () => {
             <div className="mt-14 lg:mt-0">
               <div className="relative">
                 {/* Cover Photo  */}
-                <UserCoverPhoto
-                  previewCoverPhoto={coverPhoto}
-                  onChange={handelCoverPhotoChange}
-                />
 
                 {/* Profile Photo  */}
                 <UserProfilePhoto
