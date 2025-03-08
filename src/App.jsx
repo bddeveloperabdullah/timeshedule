@@ -5,18 +5,19 @@ import Content from "./components/Content/Content";
 import Notifactions from "./components/Notifactions/Notifactions";
 import Insights from "./components/Insights/Insights";
 import Setting from "./components/Setting/Setting";
-import Menu from "./components/Menu/Menu";
 
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/content" element={<Content />} />
-        <Route path="/insights" element={<Insights />} />
-        <Route path="/notifactions" element={<Notifactions />} />
-        <Route path="/setting" element={<Setting />} />
-      </Routes>
+      <main className="font-poppins">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/content" element={<Content />} />
+          <Route path="/insights" element={<Insights />} />
+          <Route path="/notifactions" element={<Notifactions />} />
+          <Route path="/setting" element={<Setting />} />
+        </Routes>
+      </main>
     </>
   );
 }

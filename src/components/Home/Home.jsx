@@ -1,8 +1,56 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../../similar/Logo";
 import Nav from "../../similar/Nav";
+import UserCoverPhoto from "./userCoverPhoto";
+import { MdAddAPhoto } from "react-icons/md";
+import UserProfilePhoto from "./UserProfilePhoto";
 
 const Home = () => {
+  const [coverPhoto, setCoverPhoto] = useState(null);
+  const [profilePhoto, setProfilePhoto] = useState(null);
+
+  useEffect(() => {
+    // Cover Photo
+    const sevedCoverImage = localStorage.getItem("uploadCoverImage");
+    if (sevedCoverImage) {
+      setCoverPhoto(sevedCoverImage);
+    }
+
+    // Profile Photo
+    const savedProfilePhoto = localStorage.getItem("uploadProfileImage");
+    if (savedProfilePhoto) {
+      setProfilePhoto(savedProfilePhoto);
+    }
+  }, []);
+
+  // Cover Photo Change And Local Stroag Save
+  const handelCoverPhotoChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reander = new FileReader();
+      reander.readAsDataURL(file);
+      reander.onload = () => {
+        const base64Image = reander.result;
+        setCoverPhoto(base64Image);
+        localStorage.setItem("uploadCoverImage", base64Image);
+      };
+    }
+  };
+
+  // Profile Photo Change And Local Stroag Save
+  const handelProfilePhotoChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const render = new FileReader();
+      render.readAsDataURL(file);
+      render.onload = () => {
+        const profileImage = render.result;
+        setProfilePhoto(profileImage);
+        localStorage.setItem("uploadProfileImage", profileImage);
+      };
+    }
+  };
+
   return (
     <>
       <section>
@@ -21,16 +69,19 @@ const Home = () => {
 
             {/* Content Area  */}
             <div className="mt-14 lg:mt-0">
-              <h1 className="text-2xl font-poppins font-semibold">Home Page</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nesciunt distinctio sunt aliquid temporibus, excepturi officiis
-                veritatis, itaque eos modi similique iure a vel iusto culpa
-                repudiandae earum rerum placeat voluptate ullam voluptates.
-                Nulla officia dolorem, eaque reprehenderit dolores praesentium
-                ea, voluptatibus cumque quidem inventore consectetur nam
-                veritatis voluptates accusantium ex.
-              </p>
+              <div className="relative">
+                {/* Cover Photo  */}
+                <UserCoverPhoto
+                  previewCoverPhoto={coverPhoto}
+                  onChange={handelCoverPhotoChange}
+                />
+
+                {/* Profile Photo  */}
+                <UserProfilePhoto
+                  previewProfilePhoto={profilePhoto}
+                  onChange={handelProfilePhotoChange}
+                />
+              </div>
             </div>
           </div>
         </div>
