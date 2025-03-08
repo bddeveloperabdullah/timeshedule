@@ -5,15 +5,15 @@ import UserProfilePhoto from "./UserProfilePhoto";
 import UserHeroPhoto from "./UserHeroPhoto";
 
 const Home = () => {
-  // const [coverPhoto, setCoverPhoto] = useState(null);
+  const [heroPhoto, setHeroPhoto] = useState(null);
   const [profilePhoto, setProfilePhoto] = useState(null);
 
   useEffect(() => {
-    // Cover Photo
-    // const sevedCoverImage = localStorage.getItem("uploadCoverImage");
-    // if (sevedCoverImage) {
-    //   setCoverPhoto(sevedCoverImage);
-    // }
+    // Hero Photo
+    const sevedHeroImage = localStorage.getItem("uploadHeroImage");
+    if (sevedHeroImage) {
+      setHeroPhoto(sevedHeroImage);
+    }
 
     // Profile Photo
     const savedProfilePhoto = localStorage.getItem("uploadProfileImage");
@@ -23,18 +23,18 @@ const Home = () => {
   }, []);
 
   // Cover Photo Change And Local Stroag Save
-  // const handelCoverPhotoChange = (e) => {
-  //   const file = e.target.files[0];
-  //   if (file) {
-  //     const reander = new FileReader();
-  //     reander.readAsDataURL(file);
-  //     reander.onload = () => {
-  //       const base64Image = reander.result;
-  //       setCoverPhoto(base64Image);
-  //       localStorage.setItem("uploadCoverImage", base64Image);
-  //     };
-  //   }
-  // };
+  const handelHeroPhotoChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reander = new FileReader();
+      reander.readAsDataURL(file);
+      reander.onload = () => {
+        const heroImage = reander.result;
+        setHeroPhoto(heroImage);
+        localStorage.setItem("uploadHeroImage", heroImage);
+      };
+    }
+  };
 
   // Profile Photo Change And Local Stroag Save
   const handelProfilePhotoChange = (e) => {
@@ -70,7 +70,10 @@ const Home = () => {
             <div className="mt-14 lg:mt-0">
               <div className="relative">
                 {/* Cover Photo  */}
-                <UserHeroPhoto />
+                <UserHeroPhoto
+                  previewHeroPhoto={heroPhoto}
+                  onChange={handelHeroPhotoChange}
+                />
 
                 {/* Profile Photo  */}
                 <UserProfilePhoto
