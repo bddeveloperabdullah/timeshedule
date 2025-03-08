@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Logo from "../../similar/Logo";
 import Nav from "../../similar/Nav";
 import UserProfilePhoto from "./UserProfilePhoto";
+import UserHeroPhoto from "./UserHeroPhoto";
 
 const Home = () => {
   // const [coverPhoto, setCoverPhoto] = useState(null);
@@ -69,6 +70,7 @@ const Home = () => {
             <div className="mt-14 lg:mt-0">
               <div className="relative">
                 {/* Cover Photo  */}
+                <UserHeroPhoto />
 
                 {/* Profile Photo  */}
                 <UserProfilePhoto
