@@ -9,15 +9,13 @@ import Setting from "./components/Setting/Setting";
 function App() {
   return (
     <>
-      <main className="font-poppins">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/content" element={<Content />} />
-          <Route path="/insights" element={<Insights />} />
-          <Route path="/notifactions" element={<Notifactions />} />
-          <Route path="/setting" element={<Setting />} />
-        </Routes>
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/content" element={<Content />} />
+        <Route path="/insights" element={<Insights />} />
+        <Route path="/notifactions" element={<Notifactions />} />
+        <Route path="/setting" element={<Setting />} />
+      </Routes>
     </>
   );
 }
