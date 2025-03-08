@@ -33,7 +33,6 @@ const Home = () => {
         setHeroPhoto(heroImage);
         localStorage.removeItem("uploadHeroImage");
         localStorage.setItem("uploadHeroImage", heroImage);
-        setHeroPhoto(heroImage);
       };
     }
   };
@@ -49,7 +48,6 @@ const Home = () => {
         setProfilePhoto(profileImage);
         localStorage.removeItem("uploadProfileImage");
         localStorage.setItem("uploadProfileImage", profileImage);
-        setProfilePhoto(profileImage);
       };
     }
   };
